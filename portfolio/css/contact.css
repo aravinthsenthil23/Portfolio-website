@@ -1,0 +1,279 @@
+body {
+    background-color: #181818;
+    margin: 0;
+    font-family: 'Geomanist', Arial, Helvetica, sans-serif;
+
+}
+
+.page-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 10px solid #fff;
+    /* border color and thickness */
+    pointer-events: none;
+    /* lets clicks pass through */
+    z-index: 9999;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.ap-logo-container>a>img:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+    background-image: url(../images/hover-ap-logo-img.png);
+}
+
+.ap-logo-container {
+    margin: 50px;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
+
+.transparent-div {
+    margin-left: 78%;
+    overflow-y: auto;
+
+}
+
+.nav-bar {
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    left: 87%;
+
+}
+
+.nav-bar>ul {
+    list-style-type: none;
+
+
+}
+
+.nav-bar>ul>li {
+    padding: 5px;
+}
+
+#shuffle {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+#shuffle:hover {
+    color: #B3A577;
+
+}
+
+#shuffle.active {
+    color: #B3A577;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    /* scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* scrollbar color */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* hover color */
+}
+
+/* Firefox scrollbar styling */
+* {
+    scrollbar-width: thin;
+    /* "auto" or "thin" */
+    scrollbar-color: #B3A577 #fff;
+    /* thumb color, track color */
+}
+
+.contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
+}
+
+.contact {
+    width: 75%;
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.contact>p {
+    font-family: 'Geomanist-bold', Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+}
+
+
+input {
+    width: 50%;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    padding-top: 7px;
+
+}
+input::placeholder {
+    color: #B3A577;
+}
+input:focus {
+    border-bottom: 1px solid #B3A577;
+}
+#fullname{
+    margin-top: 15px;
+}
+#button{
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    border-radius: 25px;
+    color: #B3A577;
+}
+#button:hover {
+    background-color: #B3A577;
+    color: #181818;
+    cursor: pointer;
+}
+#button:active {
+    background-color: #181818;
+    color: #B3A577;
+    border: 1px solid #B3A577;
+}
+
+
+
+
+
+footer {
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media {
+    width: 75%;
+    margin: 30px 0 50px -90px;
+
+}
+
+.social-media ul {
+    list-style-type: none;
+    display: flex;
+
+}
+
+.social-media ul li {
+    margin: 0 10px;
+
+
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    font-family: 'Geomanist', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    padding: 2px;
+    border-bottom: 2px solid #fff;
+}
+
+.social-media ul li a:hover {
+    color: #B3A577;
+    border-bottom: 2px solid #B3A577;
+}
+
+.copyright {
+    font-family: 'Geomanist', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.copyright:hover {
+    color: #B3A577;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: 2.5rem;
+}
+.gradient-border {
+  --borderWidth: 1.5px;
+  background: #181818;
+  position: relative;
+   width: 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
