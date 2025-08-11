@@ -1,0 +1,156 @@
+body{
+    background-color: #181818;
+    margin: 0;
+    
+
+}
+ .page-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 10px solid #fff; /* border color and thickness */
+    pointer-events: none; /* lets clicks pass through */
+    z-index: 9999;
+  }
+
+.header{
+    display: flex;
+    flex-direction: row;
+}
+
+.ap-logo-container>a>img:hover{
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+    background-image: url(../images/hover-ap-logo-img.png);
+}
+.ap-logo-container{
+    margin: 50px;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
+.transparent-div{
+    margin-left: 78%;
+    overflow-y: auto;
+    
+}
+.nav-bar{
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    left: 87%;
+
+}
+.nav-bar>ul{
+    list-style-type: none;
+    
+    
+}
+.nav-bar>ul>li{
+    padding: 5px;
+}
+#shuffle{
+    text-decoration: none;
+    font-family: 'Geomanist',Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+#shuffle:hover{
+    color: #B3A577;
+    
+}
+#shuffle.active{
+    color: #B3A577;
+}
+
+
+main,footer{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.profile-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 150px;
+    margin-bottom: 125px;
+}
+
+.intro-container{
+    width: 75%;
+     font-family: 'Geomanist-bold',Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 38px;
+    color: #fff;
+    text-align:left ;
+    margin-bottom: 50px;
+    
+}
+.social-media{
+    width: 75%;
+    margin: -50px 0 150px -90px;
+    
+}
+.social-media ul{
+    list-style-type: none;
+    display: flex;
+    
+}
+.social-media ul li{
+    margin: 0 10px;
+
+
+}
+.social-media ul li a{
+    text-decoration: none;
+    font-family: 'Geomanist',Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    padding: 2px;
+    border-bottom: 2px solid #fff;
+}
+.social-media ul li a:hover{
+    color: #B3A577;
+    border-bottom: 2px solid #B3A577;
+}
+.copyright{
+    font-family: 'Geomanist',Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.copyright:hover{
+    color: #B3A577;
+}
+::-webkit-scrollbar {
+    width: 2px; /* scrollbar width */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* track color */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* scrollbar color */
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* hover color */
+  }
+
+  /* Firefox scrollbar styling */
+  * {
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: #B3A577 #fff; /* thumb color, track color */
+  }
