@@ -51,5 +51,20 @@
         });
 
 
+ window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const maxScroll = 500; // Distance to fully fade out
+        let opacity = 1 - scrollTop / maxScroll;
+
+        if (opacity < 0) opacity = 0;
+        if (opacity > 1) opacity = 1;
+
+        bg.style.opacity = opacity;
+    });
+
+
+
+
+
 
   
