@@ -51,7 +51,9 @@
         });
 
 
- window.addEventListener('scroll', () => {
+         const bg = document.querySelector('.background');
+
+    window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;
         const maxScroll = 500; // Distance to fully fade out
         let opacity = 1 - scrollTop / maxScroll;
@@ -61,10 +63,6 @@
 
         bg.style.opacity = opacity;
     });
-
-
-
-
 
 
   
