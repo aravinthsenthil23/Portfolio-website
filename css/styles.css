@@ -1,6 +1,8 @@
 body{
     background-color: #181818;
     margin: 0;
+    font-family: 'Geomanist',Arial, Helvetica, sans-serif;
+    
     
 
 }
@@ -252,3 +254,4 @@ main,footer{
     }
     
   }
+
