@@ -178,7 +178,7 @@ main,footer{
  @media  (max-width:425px) {
     .nav-bar{
         position: absolute;
-        margin-left: -280px;
+        margin-left: -270px;
         margin-top: -25px;
         width: fit-content;
         padding: 0;
@@ -268,6 +268,7 @@ main,footer{
     }
     
   }
+
 
 
 
