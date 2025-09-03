@@ -245,29 +245,63 @@ main,footer{
     .nav-bar{
         margin-left:-160px ;
     }
+    .profile-img{
+        width: 300px;
+        height: 300px;
+        margin-top: 200px;
+    }
+    .intro-container{
+        width: 430px;
+        margin-left: 20px;
+    }
     p{
-        font-size: 22px;
+        font-size: 23px;
     }
 
     .nav-bar>ul>li{
         font-size: 12px;
     }
     .social-media{
-        margin-left: 0;
+        margin-left: -170px;
     }
     .social-media>ul>li>a{
         font-size: 13px;
     }
   }
   @media (max-width:320px) {
-    p{
+    .nav-bar{
+        margin-left: -100px;
+    }
+    .ap-logo-container>a>img{
+        width: 40px;
+    }
+    .profile-img{
+        margin-left: 50px;
+        margin-top: 300px;
+        width:400px ;
+        height: 400px;
+    }
+    .nav-bar>ul>li{
         font-size: 20px;
     }
+    .intro-container{
+        width: 550px;
+    }
+    p{
+        font-size: 35px;
+    }
     .social-media{
-        margin-left: 40px;
+    margin-left: -120px;
+    }
+    .social-media>ul>li>a{
+        font-size: 25px;
+    }
+    .copyright>span{
+        font-size: 15px;
     }
     
   }
+
 
 
 
