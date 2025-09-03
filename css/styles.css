@@ -185,8 +185,7 @@ main,footer{
 
     }
     .page-border{
-        position: fixed;
-        z-index: 9999;
+        display:none;
     }
     body{
         width: fit-content;
@@ -269,5 +268,6 @@ main,footer{
     }
     
   }
+
 
 
