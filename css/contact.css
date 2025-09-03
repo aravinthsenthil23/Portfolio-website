@@ -314,6 +314,7 @@ footer {
     }
     body{
         width: fit-content;
+        color:black;
     }
     .nav-bar>ul{
         display: flex;
@@ -425,3 +426,4 @@ footer {
     }
     
   }
+
