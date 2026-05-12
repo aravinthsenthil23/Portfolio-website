@@ -453,12 +453,15 @@ footer {
     font-size: 12px;
     border-radius: 20px;
   }
+  form{
+    margin-left: 100px;
+  }
   form > input{
-    width: 100%;
+    width: 150%;
 
   }
   form > textarea{
-    width: 100%;
+    width: 150%;
   }
 }
 
