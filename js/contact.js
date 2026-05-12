@@ -83,3 +83,34 @@ function changeWord() {
 // Change word every 2 seconds
 setInterval(changeWord, 1500);
 
+// Form submission handler for success modal
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Show success modal
+  const modal = document.getElementById('successModal');
+  modal.classList.add('show');
+  
+  // Submit the form data to FormSubmit
+  fetch(this.action, {
+    method: this.method,
+    body: new FormData(this)
+  }).then(response => {
+    // Modal stays open for 3 seconds before closing
+    setTimeout(() => {
+      // Close modal and redirect
+      modal.classList.remove('show');
+      window.location.href = this.getAttribute('action');
+    }, 3000);
+  }).catch(error => {
+    console.error('Error:', error);
+    modal.classList.remove('show');
+  });
+});
+
+// Close modal button handler
+document.getElementById('closeModal').addEventListener('click', function() {
+  const modal = document.getElementById('successModal');
+  modal.classList.remove('show');
+});
+

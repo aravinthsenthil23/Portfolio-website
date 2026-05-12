@@ -32,7 +32,7 @@
         <div class="contact-container">
             <div class="contact">
                 <p> <span id="changingWord" class="highlight" style="color: #b3a577;">Call</span> Me Box 	&#x1F64B;&#x1F3FC;</p>
-                <form class="gradient-border" id="box" action="https://formsubmit.co/senthilaravinth0110@gmail.com" method="POST">
+                <form class="gradient-border" id="contactForm" action="https://formsubmit.co/senthilaravinth0110@gmail.com" method="POST">
                     <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
                     <input type="email" name="email" id="email" placeholder="Email" required>
                     <textarea name="message" id="message" placeholder="Message" required></textarea>
@@ -41,6 +41,22 @@
                     <input type="submit" value="Contact us" id="button">
                 </form>
 
+            </div>
+        </div>
+        
+        <!-- Success Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>✓ Message Sent!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you for reaching out. Your message has been sent successfully.</p>
+                    <p>I'll get back to you as soon as possible!</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="closeModal" class="modal-btn">Close</button>
+                </div>
             </div>
         </div>
         
