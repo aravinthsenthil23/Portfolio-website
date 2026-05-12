@@ -46,7 +46,7 @@ Version Control: Git
 
 🚀 Local Setup
 Clone the repository:
-git clone https://github.com/your-username/portfolio-name.git
+git clone https://github.com/aravinthsenthil23/portfolio-website.git
 
 Navigate to the folder:
 cd portfolio-name
