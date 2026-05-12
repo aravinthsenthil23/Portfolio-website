@@ -36,7 +36,6 @@ Responsive Multi-Page Design: A full site experience with distinct sections for 
 ├── fonts/                  # Custom Geomanist font family
 └── pdf/                    # Resume and certifications
 
-
 Thanks for sharing that screenshot! Having a multi-page structure with dedicated CSS and JS for each section makes your code much more organized and scalable.
 
 Here is the updated README.md text, precisely mapped to your folder structure:
