@@ -12,6 +12,7 @@ body{
     -moz-transform: scale(1.25); /* Firefox fallback */
     -moz-transform-origin: 0 0;
 }
+  }
  .page-border {
     position: fixed;
     top: 0;
