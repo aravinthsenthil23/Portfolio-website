@@ -436,6 +436,7 @@ footer {
     font-size: 20px;
     margin-bottom: 12px;
   }
+  
 
   .modal-body {
     font-size: 14px;
@@ -451,6 +452,13 @@ footer {
     padding: 8px 20px;
     font-size: 12px;
     border-radius: 20px;
+  }
+  form > input{
+    width: 100%;
+
+  }
+  form > textarea{
+    width: 100%;
   }
 }
 
