@@ -32,10 +32,12 @@
         <div class="contact-container">
             <div class="contact">
                 <p> <span id="changingWord" class="highlight" style="color: #b3a577;">Call</span> Me Box 	&#x1F64B;&#x1F3FC;</p>
-                <form class="gradient-border" id="box">
+                <form class="gradient-border" id="box" action="https://formsubmit.co/senthilaravinth0110@gmail.com" method="POST">
                     <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
                     <input type="email" name="email" id="email" placeholder="Email" required>
                     <textarea name="message" id="message" placeholder="Message" required></textarea>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://personal-portfolio-aravinth.netlify.app/html/contact.html">
                     <input type="submit" value="Contact us" id="button">
                 </form>
 
@@ -62,8 +64,6 @@
 
     </footer>
 </body>
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-<script src="../js/Email.js"></script>
 <script src="../js/contact.js"></script>
 <script src="../js/script.js"></script>
 
