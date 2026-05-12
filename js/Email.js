@@ -1,4 +1,6 @@
+window.emailJSConfig = {
+    serviceID: 'service_YOUR_SERVICE_ID',    // Replace with your EmailJS Service ID
+    templateID: 'template_YOUR_TEMPLATE_ID',  // Replace with your EmailJS Template ID
+    publicKey: 'YOUR_PUBLIC_KEY'              // Replace with your EmailJS Public Key
+};
 
-const emailServiceID = 'service_exwa3so';      // Paste your service ID
-const emailTemplateID = 'template_bzb5y04';   // Paste your template ID
-const emailUserID = 'WEq5a-Oauowz0tQe0';                 // Paste your public key

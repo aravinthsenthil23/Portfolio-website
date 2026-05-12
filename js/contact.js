@@ -83,13 +83,27 @@ function changeWord() {
 // Change word every 2 seconds
 setInterval(changeWord, 1500);
 
-// Email.js initialization
-const emailServiceID = 'service_YOUR_SERVICE_ID'; // Replace with your service ID
-const emailTemplateID = 'template_YOUR_TEMPLATE_ID'; // Replace with your template ID
-const emailUserID = 'YOUR_PUBLIC_KEY'; // Replace with your public key
+// Email.js configuration
+const emailConfig = window.emailJSConfig || {
+    serviceID: 'service_YOUR_SERVICE_ID',
+    templateID: 'template_YOUR_TEMPLATE_ID',
+    publicKey: 'YOUR_PUBLIC_KEY'
+};
+
+const emailServiceID = emailConfig.serviceID;
+const emailTemplateID = emailConfig.templateID;
+const emailUserID = emailConfig.publicKey;
+
+if (!emailServiceID || !emailTemplateID || !emailUserID || emailServiceID.includes('YOUR_') || emailTemplateID.includes('YOUR_') || emailUserID.includes('YOUR_')) {
+    console.warn('EmailJS is not configured. Please update js/Email.js with your EmailJS Service ID, Template ID, and Public Key.');
+}
 
 // Initialize Email.js
-emailjs.init(emailUserID);
+if (window.emailjs) {
+    emailjs.init(emailUserID);
+} else {
+    console.error('EmailJS library not loaded. Check your script include.');
+}
 
 // Form submission handler
 document.getElementById('box').addEventListener('submit', function(e) {
@@ -99,11 +113,24 @@ document.getElementById('box').addEventListener('submit', function(e) {
     button.value = 'Sending...';
     button.disabled = true;
     
-    const fullname = document.getElementById('fullname').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const fullname = document.getElementById('fullname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
     
-    // Prepare email parameters
+    if (!fullname || !email || !message) {
+        alert('Please fill in all fields.');
+        button.value = 'Contact us';
+        button.disabled = false;
+        return;
+    }
+    
+    if (!emailServiceID || !emailTemplateID || !emailUserID || emailServiceID.includes('YOUR_') || emailTemplateID.includes('YOUR_') || emailUserID.includes('YOUR_')) {
+        alert('Email service is not configured yet. Please add your EmailJS credentials to js/Email.js.');
+        button.value = 'Contact us';
+        button.disabled = false;
+        return;
+    }
+    
     const templateParams = {
         to_email: 'senthilaravinth0110@gmail.com',
         from_name: fullname,
@@ -111,7 +138,6 @@ document.getElementById('box').addEventListener('submit', function(e) {
         message: message
     };
     
-    // Send email
     emailjs.send(emailServiceID, emailTemplateID, templateParams)
         .then(function(response) {
             console.log('Email sent successfully!', response);
@@ -119,9 +145,10 @@ document.getElementById('box').addEventListener('submit', function(e) {
             document.getElementById('box').reset();
             button.value = 'Contact us';
             button.disabled = false;
-        }, function(error) {
+        })
+        .catch(function(error) {
             console.error('Failed to send email:', error);
-            alert('Failed to send message. Please try again.');
+            alert('Failed to send message. Please try again later.');
             button.value = 'Contact us';
             button.disabled = false;
         });
