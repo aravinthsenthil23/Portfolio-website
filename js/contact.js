@@ -94,6 +94,9 @@ const emailServiceID = emailConfig.serviceID;
 const emailTemplateID = emailConfig.templateID;
 const emailUserID = emailConfig.publicKey;
 
+console.log('EmailJS config:', { emailServiceID, emailTemplateID, emailUserID });
+console.log('EmailJS library present:', typeof window.emailjs !== 'undefined');
+
 if (!emailServiceID || !emailTemplateID || !emailUserID || emailServiceID.includes('YOUR_') || emailTemplateID.includes('YOUR_') || emailUserID.includes('YOUR_')) {
     console.warn('EmailJS is not configured. Please update js/Email.js with your EmailJS Service ID, Template ID, and Public Key.');
 }
@@ -126,6 +129,14 @@ document.getElementById('box').addEventListener('submit', function(e) {
     
     if (!emailServiceID || !emailTemplateID || !emailUserID || emailServiceID.includes('YOUR_') || emailTemplateID.includes('YOUR_') || emailUserID.includes('YOUR_')) {
         alert('Email service is not configured yet. Please add your EmailJS credentials to js/Email.js.');
+        button.value = 'Contact us';
+        button.disabled = false;
+        return;
+    }
+    
+    if (typeof emailjs === 'undefined') {
+        console.error('EmailJS is not available. Script did not load.');
+        alert('EmailJS is not available. Please refresh the page or check your internet connection.');
         button.value = 'Contact us';
         button.disabled = false;
         return;
