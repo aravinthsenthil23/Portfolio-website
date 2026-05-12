@@ -82,3 +82,18 @@ function changeWord() {
 
 // Change word every 2 seconds
 setInterval(changeWord, 1500);
+
+// Form submission feedback
+document.getElementById('box').addEventListener('submit', function(e) {
+    // Show feedback to user
+    const button = document.getElementById('button');
+    const originalValue = button.value;
+    button.value = 'Sending...';
+    button.disabled = true;
+    
+    // Re-enable after 2 seconds
+    setTimeout(() => {
+        button.value = originalValue;
+        button.disabled = false;
+    }, 2000);
+});

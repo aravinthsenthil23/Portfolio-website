@@ -32,11 +32,13 @@
         <div class="contact-container">
             <div class="contact">
                 <p> <span id="changingWord" class="highlight" style="color: #b3a577;">Call</span> Me Box 	&#x1F64B;&#x1F3FC;</p>
-                <form action="" class="gradient-border" id="box">
-                    <input type="text" name="fullname" id="fullname" placeholder="Full Name">
-                    <input type="email" name="email" id="email" placeholder="Email">
-                    <input type="text" name="message" id="message" placeholder="Message">
-                    <input type="button" value="Contact us" id="button">
+                <form class="gradient-border" id="box" action="https://formsubmit.co/senthilaravinth0110@gmail.com" method="POST">
+                    <input type="text" name="fullname" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://yourportfoliowebsite.com/html/contact.html">
+                    <input type="submit" value="Contact us" id="button">
                 </form>
 
             </div>
