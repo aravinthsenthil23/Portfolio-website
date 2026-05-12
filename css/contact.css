@@ -4,6 +4,12 @@ body {
     font-family: 'Geomanist', Arial, Helvetica, sans-serif;
 
 }
+  @media all and (min-width:1440px) {
+    body {
+    zoom: 1.25; /* Scales everything to 125% */
+    -moz-transform: scale(1.25); /* Firefox fallback */
+    -moz-transform-origin: 0 0;
+}
 
 .page-border {
     position: fixed;
