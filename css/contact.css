@@ -9,6 +9,7 @@ body {
     zoom: 1.25; /* Scales everything to 125% */
     -moz-transform: scale(1.25); /* Firefox fallback */
     -moz-transform-origin: 0 0;
+    }
 }
 
 .page-border {
@@ -155,11 +156,24 @@ input:focus {
 #fullname{
     margin-top: 15px;
 }
+textarea {
+    width: 50%;
+    height: 100px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+textarea::placeholder {
+    color: #B3A577;
+}
 #button{
     border: 1px solid #fff;
     padding: 5px 20px;
     border-radius: 25px;
     color: #B3A577;
+    margin-top: 10px;
 }
 #button:hover {
     background-color: #B3A577;
